@@ -46,10 +46,12 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
+            this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(204, 260);
+            this.dataGridView.Size = new System.Drawing.Size(272, 320);
             this.dataGridView.TabIndex = 1;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             this.dataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellValueChanged);
@@ -59,12 +61,13 @@
             // menuStrip
             // 
             this.menuStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.допToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, -2);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.ShowItemToolTips = true;
-            this.menuStrip.Size = new System.Drawing.Size(49, 24);
+            this.menuStrip.Size = new System.Drawing.Size(61, 30);
             this.menuStrip.TabIndex = 2;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -74,20 +77,20 @@
             this.sQLCompareToolStripMenuItem,
             this.создатьСнапшотыToolStripMenuItem});
             this.допToolStripMenuItem.Name = "допToolStripMenuItem";
-            this.допToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.допToolStripMenuItem.Size = new System.Drawing.Size(51, 26);
             this.допToolStripMenuItem.Text = "Доп";
             // 
             // sQLCompareToolStripMenuItem
             // 
             this.sQLCompareToolStripMenuItem.Name = "sQLCompareToolStripMenuItem";
-            this.sQLCompareToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.sQLCompareToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.sQLCompareToolStripMenuItem.Text = "Взять строку подключения";
             this.sQLCompareToolStripMenuItem.Click += new System.EventHandler(this.sQLCompareToolStripMenuItem_Click);
             // 
             // создатьСнапшотыToolStripMenuItem
             // 
             this.создатьСнапшотыToolStripMenuItem.Name = "создатьСнапшотыToolStripMenuItem";
-            this.создатьСнапшотыToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.создатьСнапшотыToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.создатьСнапшотыToolStripMenuItem.Text = "Создать снапшоты";
             this.создатьСнапшотыToolStripMenuItem.Click += new System.EventHandler(this.создатьСнапшотыToolStripMenuItem_Click);
             // 
@@ -95,20 +98,23 @@
             // 
             this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMenu.Controls.Add(this.menuStrip);
-            this.panelMenu.Location = new System.Drawing.Point(128, 2);
+            this.panelMenu.Location = new System.Drawing.Point(171, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(51, 20);
+            this.panelMenu.Size = new System.Drawing.Size(68, 25);
             this.panelMenu.TabIndex = 3;
             this.panelMenu.Visible = false;
             // 
             // GridBases
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.dataGridView);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GridBases";
-            this.Size = new System.Drawing.Size(204, 260);
+            this.Size = new System.Drawing.Size(272, 320);
+            this.Load += new System.EventHandler(this.GridBases_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

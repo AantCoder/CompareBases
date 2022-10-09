@@ -68,7 +68,7 @@ namespace CompareBases
 
             dataGridView.Columns[dataGridView.Columns.Add(new DataGridViewCheckBoxColumn())].Name = "Select";
             dataGridView.Columns["Select"].HeaderText = "";
-            dataGridView.Columns["Select"].Width = 20;
+            dataGridView.Columns["Select"].Width = 24;
             dataGridView.Columns["Select"].ValueType = typeof(bool);
             //задаем высоту, чтобы влезла мини меню "Доп"
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -247,11 +247,10 @@ namespace CompareBases
             return Path.Combine(PathTemp, uniqueName) + "." + ext.Replace(".", "");
         }
 
-
-
-
-
-
-
+        private void GridBases_Load(object sender, EventArgs e)
+        {
+            //защита от сбоя при маштабировании интерфейса Windows
+            panelMenu.Left = this.Width + (171 - 272); // (начальная позиция panelMenu.Left - начальное значение this.Width)
+        }
     }
 }

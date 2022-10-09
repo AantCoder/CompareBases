@@ -117,20 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonExec.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAADxJREFUOE/djDEOACAQwvj/p1UGEsZDEgfbucXPrGMFB9VEg+uJD2iMxzLCQ3eM
-        RzLCQxpTxaSKSRW/A9hzGEe5vsyCiQAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Внимание!
 1. Пароли хранятся в открытом виде в файле настроек.
 2. Программа не полно, а возможно и не корректно, выдает информацию по таблицам.
 3. Скрипт на вкладке Применить:
- - Для процедур и функций вначале вставляется блок удаляющий их (if object_id('{0}') is not null drop {1} {0})
+ - Для процедур и функций вначале заменяется create на alter, могут быть ошибки с комментариями в начале кода
  - Разделитель GO делит запрос только в первых 10 строках (т.к. есть сложности с комментариями)
  - Две последние строки с символами GO в запросе удаляются перед выполнением 
 4. В ходе работы программа создает папки Temp и Result, содержащие временные данные, которые можно удалять.
@@ -147,13 +139,14 @@
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Программа сравнения баз данных.
-Версия 1.05.06.  27.05.2016 - 08.11.2019
+Версия 1.06.00.  27.05.2016 - 09.10.2022
 
 Автор: Иванов Василий Сергеевич
 emAnt@mail.ru
 
 Программа предоставляется по лицензии Apache License, Version 2.0
-Подробнее смотри LICENSE на http://github.com/AantCoder/CompareBases/</value>
+Подробнее смотри LICENSE на http://github.com/AantCoder/CompareBases/
+</value>
   </data>
   <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -163,7 +156,7 @@ emAnt@mail.ru
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABe
-        BwAAAk1TRnQBSQFMAwEBAAFAAQEBQAEBARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        BwAAAk1TRnQBSQFMAwEBAAG4AQEBuAEBARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
@@ -197,13 +190,21 @@ emAnt@mail.ru
         AfABDwYAAfgBHwYAAfwBPwYAAv8GAAL/BgAC/wYACw==
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonExec.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAADxJREFUOE/djDEOACAQwvj/p1UGEsZDEgfbucXPrGMFB9VEg+uJD2iMxzLCQ3eM
+        RzLCQxpTxaSKSRW/A9hzGEe5vsyCiQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="dataGridViewMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
   <data name="buttonExec2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAADxJREFUOE/djDEOACAQwvj/p1UGEsZDEgfbucXPrGMFB9VEg+uJD2iMxzLCQ3eM
+        vAAADrwBlbxySQAAADxJREFUOE/djDEOACAQwvj/p1UGEsZDEgfbucXPrGMFB9VEg+uJD2iMxzLCQ3eM
         RzLCQxpTxaSKSRW/A9hzGEe5vsyCiQAAAABJRU5ErkJggg==
 </value>
   </data>

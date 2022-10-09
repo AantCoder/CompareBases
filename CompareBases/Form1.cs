@@ -895,7 +895,8 @@ namespace CompareBases
 
         private void toolStripMenuToApp_Click(object sender, EventArgs e)
         {
-            ActionDoubleClick(false);
+            //ActionDoubleClick(false); //вариант с удалением и созданием (менее подвержен багам, но теряються гранды БД)
+            ActionDoubleClick(false, isAlter: true); //вариант с заменой на alter
         }
 
         private void toolStripMenuMSSQL_Click(object sender, EventArgs e)
@@ -914,9 +915,10 @@ namespace CompareBases
             ActionDoubleClick(false, false, true);
         }
 
+        //Был пункт:   тоже с ALTER
         private void toolStripMenuToAppAlter_Click(object sender, EventArgs e)
         {
-            ActionDoubleClick(false, false, false, true);
+            //ActionDoubleClick(false, false, false, true);
         }
 
         private void butTextClear_Click(object sender, EventArgs e)
@@ -928,6 +930,14 @@ namespace CompareBases
         private void butTextCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetDataObject(tbExec.Text);
+        }
+
+        private void butTextInsert_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                tbExec.Text = Clipboard.GetText();
+            }
         }
 
         private void utilsView1_Load(object sender, EventArgs e)
@@ -963,6 +973,14 @@ namespace CompareBases
                 MessageBox.Show("Ошибка. Проверьте установлен ли SVN, и вход произведен. ");
             }
         }
-        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular);
+
+            this.label2.Text = this.label2.Text;
+            this.label7.Text = this.label7.Text;
+        }
     }
 }

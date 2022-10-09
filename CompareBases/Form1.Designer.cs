@@ -60,20 +60,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
-            this.compareBases = new CompareBases.GridBases();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainerExec = new System.Windows.Forms.SplitContainer();
-            this.butTextCopy = new System.Windows.Forms.Button();
-            this.butTextClear = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.gridBasesExec = new CompareBases.GridBases();
-            this.tbExec = new System.Windows.Forms.TextBox();
+            this.tbExecOld = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.labelExecStat = new System.Windows.Forms.Label();
             this.buttonExec = new System.Windows.Forms.Button();
+            this.butTextClear = new System.Windows.Forms.Button();
+            this.butTextInsert = new System.Windows.Forms.Button();
+            this.butTextCopy = new System.Windows.Forms.Button();
             this.textBoxExecRes = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.utilsView1 = new CompareBases.UtilsView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -87,7 +87,10 @@
             this.перейтиКФайлуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemSVNLog = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonExec2 = new System.Windows.Forms.Button();
-            this.toolStripMenuToAppAlter = new System.Windows.Forms.ToolStripMenuItem();
+            this.compareBases = new CompareBases.GridBases();
+            this.gridBasesExec = new CompareBases.GridBases();
+            this.tbExec = new CompareBases.TextBoxCode();
+            this.utilsView1 = new CompareBases.UtilsView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -107,8 +110,10 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.dataGridViewMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +127,7 @@
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
+            this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.Size = new System.Drawing.Size(766, 417);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.dataGridView_CellStateChanged);
@@ -490,14 +496,6 @@
             this.splitContainer.SplitterDistance = 350;
             this.splitContainer.TabIndex = 3;
             // 
-            // compareBases
-            // 
-            this.compareBases.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.compareBases.Location = new System.Drawing.Point(0, 0);
-            this.compareBases.Name = "compareBases";
-            this.compareBases.Size = new System.Drawing.Size(350, 417);
-            this.compareBases.TabIndex = 0;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.splitContainerExec);
@@ -517,46 +515,19 @@
             // 
             // splitContainerExec.Panel1
             // 
-            this.splitContainerExec.Panel1.Controls.Add(this.butTextCopy);
-            this.splitContainerExec.Panel1.Controls.Add(this.butTextClear);
             this.splitContainerExec.Panel1.Controls.Add(this.splitContainer1);
-            this.splitContainerExec.Panel1.Controls.Add(this.labelExecStat);
-            this.splitContainerExec.Panel1.Controls.Add(this.buttonExec);
+            this.splitContainerExec.Panel1.Controls.Add(this.panel2);
             // 
             // splitContainerExec.Panel2
             // 
             this.splitContainerExec.Panel2.Controls.Add(this.textBoxExecRes);
             this.splitContainerExec.Size = new System.Drawing.Size(1126, 538);
-            this.splitContainerExec.SplitterDistance = 260;
+            this.splitContainerExec.SplitterDistance = 259;
             this.splitContainerExec.TabIndex = 0;
-            // 
-            // butTextCopy
-            // 
-            this.butTextCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.butTextCopy.Location = new System.Drawing.Point(974, 233);
-            this.butTextCopy.Name = "butTextCopy";
-            this.butTextCopy.Size = new System.Drawing.Size(79, 23);
-            this.butTextCopy.TabIndex = 12;
-            this.butTextCopy.Text = "Копировать";
-            this.butTextCopy.UseVisualStyleBackColor = true;
-            this.butTextCopy.Click += new System.EventHandler(this.butTextCopy_Click);
-            // 
-            // butTextClear
-            // 
-            this.butTextClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.butTextClear.Location = new System.Drawing.Point(1059, 233);
-            this.butTextClear.Name = "butTextClear";
-            this.butTextClear.Size = new System.Drawing.Size(64, 23);
-            this.butTextClear.TabIndex = 12;
-            this.butTextClear.Text = "Очистить";
-            this.butTextClear.UseVisualStyleBackColor = true;
-            this.butTextClear.Click += new System.EventHandler(this.butTextClear_Click);
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
@@ -569,36 +540,42 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tbExec);
+            this.splitContainer1.Panel2.Controls.Add(this.tbExecOld);
             this.splitContainer1.Size = new System.Drawing.Size(1126, 229);
             this.splitContainer1.SplitterDistance = 350;
             this.splitContainer1.TabIndex = 3;
             // 
-            // gridBasesExec
+            // tbExecOld
             // 
-            this.gridBasesExec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridBasesExec.Location = new System.Drawing.Point(0, 0);
-            this.gridBasesExec.Name = "gridBasesExec";
-            this.gridBasesExec.Size = new System.Drawing.Size(350, 229);
-            this.gridBasesExec.TabIndex = 1;
+            this.tbExecOld.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbExecOld.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbExecOld.Location = new System.Drawing.Point(0, 0);
+            this.tbExecOld.Multiline = true;
+            this.tbExecOld.Name = "tbExecOld";
+            this.tbExecOld.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.tbExecOld.Size = new System.Drawing.Size(772, 229);
+            this.tbExecOld.TabIndex = 0;
+            this.tbExecOld.WordWrap = false;
             // 
-            // tbExec
+            // panel2
             // 
-            this.tbExec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbExec.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbExec.Location = new System.Drawing.Point(0, 0);
-            this.tbExec.Multiline = true;
-            this.tbExec.Name = "tbExec";
-            this.tbExec.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbExec.Size = new System.Drawing.Size(772, 229);
-            this.tbExec.TabIndex = 0;
-            this.tbExec.WordWrap = false;
+            this.panel2.Controls.Add(this.labelExecStat);
+            this.panel2.Controls.Add(this.buttonExec);
+            this.panel2.Controls.Add(this.butTextClear);
+            this.panel2.Controls.Add(this.butTextInsert);
+            this.panel2.Controls.Add(this.butTextCopy);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 229);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1126, 30);
+            this.panel2.TabIndex = 13;
             // 
             // labelExecStat
             // 
             this.labelExecStat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelExecStat.AutoSize = true;
             this.labelExecStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelExecStat.Location = new System.Drawing.Point(98, 238);
+            this.labelExecStat.Location = new System.Drawing.Point(98, 10);
             this.labelExecStat.Name = "labelExecStat";
             this.labelExecStat.Size = new System.Drawing.Size(64, 13);
             this.labelExecStat.TabIndex = 2;
@@ -609,7 +586,7 @@
             this.buttonExec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonExec.BackColor = System.Drawing.Color.Bisque;
             this.buttonExec.Image = ((System.Drawing.Image)(resources.GetObject("buttonExec.Image")));
-            this.buttonExec.Location = new System.Drawing.Point(3, 230);
+            this.buttonExec.Location = new System.Drawing.Point(0, 2);
             this.buttonExec.Name = "buttonExec";
             this.buttonExec.Size = new System.Drawing.Size(89, 28);
             this.buttonExec.TabIndex = 1;
@@ -617,6 +594,39 @@
             this.buttonExec.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExec.UseVisualStyleBackColor = false;
             this.buttonExec.Click += new System.EventHandler(this.buttonExec_Click);
+            // 
+            // butTextClear
+            // 
+            this.butTextClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.butTextClear.Location = new System.Drawing.Point(1059, 4);
+            this.butTextClear.Name = "butTextClear";
+            this.butTextClear.Size = new System.Drawing.Size(64, 23);
+            this.butTextClear.TabIndex = 12;
+            this.butTextClear.Text = "Очистить";
+            this.butTextClear.UseVisualStyleBackColor = true;
+            this.butTextClear.Click += new System.EventHandler(this.butTextClear_Click);
+            // 
+            // butTextInsert
+            // 
+            this.butTextInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.butTextInsert.Location = new System.Drawing.Point(974, 4);
+            this.butTextInsert.Name = "butTextInsert";
+            this.butTextInsert.Size = new System.Drawing.Size(79, 23);
+            this.butTextInsert.TabIndex = 12;
+            this.butTextInsert.Text = "Вставить";
+            this.butTextInsert.UseVisualStyleBackColor = true;
+            this.butTextInsert.Click += new System.EventHandler(this.butTextInsert_Click);
+            // 
+            // butTextCopy
+            // 
+            this.butTextCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.butTextCopy.Location = new System.Drawing.Point(889, 4);
+            this.butTextCopy.Name = "butTextCopy";
+            this.butTextCopy.Size = new System.Drawing.Size(79, 23);
+            this.butTextCopy.TabIndex = 12;
+            this.butTextCopy.Text = "Копировать";
+            this.butTextCopy.UseVisualStyleBackColor = true;
+            this.butTextCopy.Click += new System.EventHandler(this.butTextCopy_Click);
             // 
             // textBoxExecRes
             // 
@@ -627,7 +637,7 @@
             this.textBoxExecRes.Name = "textBoxExecRes";
             this.textBoxExecRes.ReadOnly = true;
             this.textBoxExecRes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxExecRes.Size = new System.Drawing.Size(1126, 274);
+            this.textBoxExecRes.Size = new System.Drawing.Size(1126, 275);
             this.textBoxExecRes.TabIndex = 1;
             this.textBoxExecRes.WordWrap = false;
             // 
@@ -642,19 +652,9 @@
             this.tabPage4.Text = "Утилиты";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // utilsView1
-            // 
-            this.utilsView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilsView1.Location = new System.Drawing.Point(3, 3);
-            this.utilsView1.Name = "utilsView1";
-            this.utilsView1.Size = new System.Drawing.Size(1126, 538);
-            this.utilsView1.TabIndex = 0;
-            this.utilsView1.Load += new System.EventHandler(this.utilsView1_Load);
-            // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -663,23 +663,32 @@
             this.tabPage3.Text = "О программе";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(27, 22);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1072, 491);
+            this.panel1.TabIndex = 1;
+            // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(30, 204);
+            this.label7.Location = new System.Drawing.Point(0, 179);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1094, 290);
+            this.label7.Size = new System.Drawing.Size(1072, 312);
             this.label7.TabIndex = 0;
             this.label7.Text = resources.GetString("label7.Text");
             // 
             // label2
             // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(29, 27);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(610, 162);
+            this.label2.Size = new System.Drawing.Size(1072, 162);
             this.label2.TabIndex = 0;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -691,10 +700,10 @@
             // 
             // dataGridViewMenuStrip
             // 
+            this.dataGridViewMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.dataGridViewMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuComp,
             this.toolStripMenuToApp,
-            this.toolStripMenuToAppAlter,
             this.toolStripMenuBases,
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
@@ -702,12 +711,12 @@
             this.перейтиКФайлуToolStripMenuItem,
             this.toolStripMenuItemSVNLog});
             this.dataGridViewMenuStrip.Name = "dataGridViewMenuStrip";
-            this.dataGridViewMenuStrip.Size = new System.Drawing.Size(232, 208);
+            this.dataGridViewMenuStrip.Size = new System.Drawing.Size(236, 192);
             // 
             // toolStripMenuComp
             // 
             this.toolStripMenuComp.Name = "toolStripMenuComp";
-            this.toolStripMenuComp.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuComp.Size = new System.Drawing.Size(235, 26);
             this.toolStripMenuComp.Text = "Сравнить";
             this.toolStripMenuComp.Click += new System.EventHandler(this.butSelComp_Click);
             // 
@@ -715,7 +724,7 @@
             // 
             this.toolStripMenuToApp.Image = global::CompareBases.Properties.Resources.sqlQuery;
             this.toolStripMenuToApp.Name = "toolStripMenuToApp";
-            this.toolStripMenuToApp.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuToApp.Size = new System.Drawing.Size(235, 26);
             this.toolStripMenuToApp.Text = "Содержимое к применению";
             this.toolStripMenuToApp.Click += new System.EventHandler(this.toolStripMenuToApp_Click);
             // 
@@ -723,40 +732,40 @@
             // 
             this.toolStripMenuBases.Image = global::CompareBases.Properties.Resources.check;
             this.toolStripMenuBases.Name = "toolStripMenuBases";
-            this.toolStripMenuBases.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuBases.Size = new System.Drawing.Size(235, 26);
             this.toolStripMenuBases.Text = "Отметить базы как цель";
             this.toolStripMenuBases.Click += new System.EventHandler(this.butSelExecBases_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(232, 6);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(235, 26);
             this.toolStripMenuItem2.Text = "Содержимое в буфер";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuMSSQL
             // 
             this.toolStripMenuMSSQL.Name = "toolStripMenuMSSQL";
-            this.toolStripMenuMSSQL.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuMSSQL.Size = new System.Drawing.Size(235, 26);
             this.toolStripMenuMSSQL.Text = "Открыть в MS SQL";
             this.toolStripMenuMSSQL.Click += new System.EventHandler(this.toolStripMenuMSSQL_Click);
             // 
             // перейтиКФайлуToolStripMenuItem
             // 
             this.перейтиКФайлуToolStripMenuItem.Name = "перейтиКФайлуToolStripMenuItem";
-            this.перейтиКФайлуToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.перейтиКФайлуToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.перейтиКФайлуToolStripMenuItem.Text = "Перейти к файлу";
             this.перейтиКФайлуToolStripMenuItem.Click += new System.EventHandler(this.перейтиКФайлуToolStripMenuItem_Click);
             // 
             // toolStripMenuItemSVNLog
             // 
             this.toolStripMenuItemSVNLog.Name = "toolStripMenuItemSVNLog";
-            this.toolStripMenuItemSVNLog.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuItemSVNLog.Size = new System.Drawing.Size(235, 26);
             this.toolStripMenuItemSVNLog.Text = "SVN лог";
             this.toolStripMenuItemSVNLog.Click += new System.EventHandler(this.toolStripMenuItemSVNLog_Click);
             // 
@@ -774,12 +783,44 @@
             this.buttonExec2.UseVisualStyleBackColor = false;
             this.buttonExec2.Click += new System.EventHandler(this.buttonExec_Click);
             // 
-            // toolStripMenuToAppAlter
+            // compareBases
             // 
-            this.toolStripMenuToAppAlter.Name = "toolStripMenuToAppAlter";
-            this.toolStripMenuToAppAlter.Size = new System.Drawing.Size(231, 22);
-            this.toolStripMenuToAppAlter.Text = "  тоже с ALTER";
-            this.toolStripMenuToAppAlter.Click += new System.EventHandler(this.toolStripMenuToAppAlter_Click);
+            this.compareBases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.compareBases.Location = new System.Drawing.Point(0, 0);
+            this.compareBases.Margin = new System.Windows.Forms.Padding(4);
+            this.compareBases.Name = "compareBases";
+            this.compareBases.Size = new System.Drawing.Size(350, 417);
+            this.compareBases.TabIndex = 0;
+            // 
+            // gridBasesExec
+            // 
+            this.gridBasesExec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridBasesExec.Location = new System.Drawing.Point(0, 0);
+            this.gridBasesExec.Margin = new System.Windows.Forms.Padding(4);
+            this.gridBasesExec.Name = "gridBasesExec";
+            this.gridBasesExec.Size = new System.Drawing.Size(350, 229);
+            this.gridBasesExec.TabIndex = 1;
+            // 
+            // tbExec
+            // 
+            this.tbExec.BackColor = System.Drawing.SystemColors.Window;
+            this.tbExec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbExec.Location = new System.Drawing.Point(0, 0);
+            this.tbExec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbExec.Name = "tbExec";
+            this.tbExec.ReadOnly = false;
+            this.tbExec.Size = new System.Drawing.Size(772, 229);
+            this.tbExec.TabIndex = 1;
+            // 
+            // utilsView1
+            // 
+            this.utilsView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.utilsView1.Location = new System.Drawing.Point(3, 3);
+            this.utilsView1.Margin = new System.Windows.Forms.Padding(4);
+            this.utilsView1.Name = "utilsView1";
+            this.utilsView1.Size = new System.Drawing.Size(1126, 538);
+            this.utilsView1.TabIndex = 0;
+            this.utilsView1.Load += new System.EventHandler(this.utilsView1_Load);
             // 
             // Form1
             // 
@@ -790,6 +831,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Сравнение баз данных";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -805,7 +847,6 @@
             this.splitContainer.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.splitContainerExec.Panel1.ResumeLayout(false);
-            this.splitContainerExec.Panel1.PerformLayout();
             this.splitContainerExec.Panel2.ResumeLayout(false);
             this.splitContainerExec.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerExec)).EndInit();
@@ -815,8 +856,11 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.dataGridViewMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -836,7 +880,7 @@
         private System.Windows.Forms.SplitContainer splitContainerExec;
         private System.Windows.Forms.Label labelExecStat;
         private System.Windows.Forms.Button buttonExec;
-        private System.Windows.Forms.TextBox tbExec;
+        private System.Windows.Forms.TextBox tbExecOld;
         private System.Windows.Forms.TextBox textBoxExecRes;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -881,7 +925,10 @@
         private System.Windows.Forms.Button butTextClear;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSVNLog;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuToAppAlter;
+        private TextBoxCode tbExec;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button butTextInsert;
     }
 }
 
